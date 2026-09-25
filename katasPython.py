@@ -49,7 +49,7 @@ l2 = [3, 5, 10, 15]
 resultado = diferencia_valor(l1, l2)
 # print(resultado)
 
-# Importando modulo
+# 4 Importando modulo
 
 from operator import sub
 
@@ -57,14 +57,74 @@ def diferencia_listas(lista1, lista2):
     return list(map(sub, lista1, lista2))
 
 # 5 Escribe una función que tome una lista de números como parámetro y un valor opcional nota_aprobado (por defecto 5). La función debe calcular la media de los números en la lista y determinar si la media es mayor o igual que nota_aprobado. Si es así, el estado será "aprobado"; de lo contrario, "suspenso". La función debe devolver una tupla que contenga la media y el estado.
+def calcular_media(lista_notas,nota_aprobado=5):
+    
+    media = sum(lista_notas) / len(lista_notas)
+    estado = "aprobado" if media >= nota_aprobado else "suspenso"
+    
+    return (media, estado)
+notas_alumno1 = [4, 6, 5, 7, 3]
+media1, estado1 = calcular_media(notas_alumno1)
+# print(f"Media: {media1}, Estado: {estado1}")
 
-# 6 Genera una función que convierta una lista de tuplas a una lista de strings. Usa la función map().
+# 6 Escribe un programa que pida al usuario dos números e intente dividirlos. Si el usuario ingresa un valor no numérico o intenta dividir por cero, maneja esas excepciones de manera adecuada y muestra un mensaje indicando si la división fue exitosa o no.
+
+def dividir_numeros():
+    try:
+        num1 = float(input("Introduce el primer número: "))
+        num2 = float(input("Introduce el segundo número: "))
+        
+        resultado = num1 / num2
+
+    except ValueError:
+        print(" Error: Debes ingresar valores numéricos válidos.")
+        print("La división NO fue exitosa.")
+
+    except ZeroDivisionError:
+        print(" Error: No se puede dividir entre cero.")
+        print("La división NO fue exitosa.")
+
+    else:
+        print(f" Éxito: El resultado de {num1} / {num2} es {resultado}")
+        print("La división fue exitosa.")
+
+# Ejecutamos el programa
+dividir_numeros()
+
+# 7 Genera una función que convierta una lista de tuplas a una lista de strings. Usa la función map().
+def conversor_tupla_string(tupla):
+    return list(map(lambda t: " ".join(t),tupla))
+
+tuplas = [('Hola', 'Mundo'), ('Python', 'es', 'genial'), ('Katas', '2026')]
+resultado = conversor_tupla_string(tuplas)
+
+# print(resultado)
    
-# 7 Escribe un programa que pida al usuario dos números e intente dividirlos. Si el usuario ingresa un valor no numérico o intenta dividir por cero, maneja esas excepciones de manera adecuada y muestra un mensaje indicando si la división fue exitosa o no.
-
 # 8 Escribe una función que tome una lista de nombres de mascotas como parámetro y devuelva una nueva lista excluyendo ciertas mascotas prohibidas en España. La lista de mascotas a excluir es ["Mapache", "Tigre", "Serpiente Pitón", "Cocodrilo", "Oso"]. Usa la función filter().
+def filtrar_mascotas(lista_mascotas):
+    prohibidas = ["Mapache", "Tigre", "Serpiente Pitón", "Cocodrilo", "Oso"]
+    return list(filter(lambda mascotas: mascotas not in prohibidas, lista_mascotas))
+mis_mascotas = ["Perro", "Tigre", "Gato", "Mapache", "Hámster", "Oso"]
+resultado = filtrar_mascotas(mis_mascotas)
+
+# print(resultado)
 
 # 9 Escribe una función que reciba una lista de números y calcule su promedio. Si la lista está vacía, lanza una excepción personalizada y maneja el error adecuadamente.
+class ListaVaciaError(Exception):
+    """Excepción lanzada cuando la lista de números está vacía."""
+    pass
+
+def calculo_promedio(lista_numeros):
+    if not lista_numeros:
+        raise ListaVaciaError("No se puede calcular el promedio de una lista vacía.")
+    
+    return sum(lista_numeros) / len(lista_numeros)
+
+try:
+    resultado = calculo_promedio([10, 20, 30])
+    # print(f"El promedio es: {resultado}")  # Salida: El promedio es: 20.0
+except ListaVaciaError as e:
+    # print(f"Error capturado: {e}")
 
 # 10 Escribe un programa que pida al usuario que introduzca su edad. Si el usuario ingresa un valor no numérico o un valor fuera del rango esperado (por ejemplo, menor que 0 o mayor que 120), maneja las excepciones adecuadamente.
 
@@ -182,6 +242,3 @@ def diferencia_listas(lista1, lista2):
     #     d. Aplicar el descuento al precio original, siempre que el valor del cupón sea válido (mayor a cero).
     #     e. Mostrar el precio final de la compra, considerando o no el descuento.
     #     f. Usar estructuras de control de flujo (if, elif, else) para llevar a cabo las acciones.
-
-
-    
