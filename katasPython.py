@@ -241,22 +241,118 @@
 
 # 18 Crea una función lambda que filtre los números impares de una lista dada.
 
+    # def filtro_impares(lista_numeros):
+    #     return list(map(lambda x: x % 2 !=0,lista_numeros))
+
+    # numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    # impares = filtro_impares(numeros)
+
+    # print(impares)
+
 # 19 Para una lista con elementos de tipo integer y string, obtén una nueva lista solo con los valores int. Usa la función filter().
+
+    # def buscar_enteros(lista_mixta):
+    #     return list(filter(lambda x: isinstance(x,int), lista_mixta))
+
+    # lista_elementos = [10, "hola", 25, "python", 100, "katas", True]
+    # enteros = buscar_enteros(lista_elementos)
+
+    # print(enteros)
+                
+                
 # 20 Crea una función que calcule el cubo de un número dado mediante una función lambda.
+
+    # def calculo_cubo(numero):
+    #     cubo = lambda x: x**3
+    #     return cubo(numero)
+
+    # valor = 3
+    # resultado_cubo = calculo_cubo(valor)
+
+    # print(resultado_cubo)
+
 
 # 21 Dada una lista numérica, obtén el producto total de los valores. Usa la función reduce().
 
+    # from functools import reduce
+
+    # def total_valores(lista_numeros):
+    #     return reduce(lambda acumulado,x: acumulado*x,lista_numeros)
+
+    # numeros = [1,2,3,4,5,6,7,8,9]
+    # resultado_final= total_valores(numeros)
+
+    # print(resultado_final)
+    
 # 22 Concatena una lista de palabras. Usa la función reduce().
 
+    # from functools import reduce
+
+    # def concatenar_palabras(lista_palabras):
+    #     return reduce(lambda p,p2: p+" "+p2,lista_palabras)
+
+    # palabras = ["Hola", "mundo", "desde", "Python"]
+    # resultado = concatenar_palabras(palabras)
+
+    # print(resultado)
+
+
 # 23 Calcula la diferencia total en los valores de una lista. Usa la función reduce().
+    
+    # from functools import reduce
+
+    # def diferencia_valores(lista_valores):
+    #     return reduce(lambda x,x1: x-x1,lista_valores)
+
+    # numeros = [100, 20, 10, 5]
+    # resultado = diferencia_valores(numeros)
+
+    # print(resultado)
 
 # 24 Crea una función que cuente el número de caracteres en una cadena de texto dada.
 
+    # from functools import reduce
+
+    # def calculo_caracteres_totales(lista_palabras):
+    #     return sum(map(len,lista_palabras))
+
+    # palabras = ["hola", "cola", "pa", "ti"]
+    # resultado = calculo_caracteres_totales(palabras)
+
+    # print(resultado)
+
 # 25 Crea una función lambda que calcule el resto de la división entre dos números dados.
+
+    # def resto_division(numero1,numero2):
+    #     resto= lambda a,b: a%b
+    #     return resto (numero1,numero2)
+
+    # print(resto_division(10,3))
 
 # 26 Crea una función que calcule el promedio de una lista de números.
 
+    # def calcular_promedio(lista_numeros):
+    #     return sum(lista_numeros)/len(lista_numeros)
+    # numeros = [10, 20, 30, 40, 50]
+    # resultado = calcular_promedio(numeros)
+
+    # print(resultado)
+
 # 27 Crea una función que busque y devuelva el primer elemento duplicado en una lista dada.
+ 
+def buscar_duplicado(lista):
+    no_duplicados = set()
+    for elemento in lista:
+        if elemento in no_duplicados:
+            return elemento  #Aqui devolverias el primer elemento al encontrar coincidencia en el set
+        else:
+            no_duplicados.add(elemento)
+    return None
+
+numeros = [2, 5, 1, 2, 3, 5, 14]
+resultado = buscar_duplicado(numeros)
+
+print(resultado)
 
 # 28 Crea una función que convierta una variable en una cadena de texto y enmascare todos los caracteres con el carácter '#' excepto los últimos cuatro.
 
