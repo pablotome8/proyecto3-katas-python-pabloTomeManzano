@@ -340,19 +340,19 @@
 
 # 27 Crea una función que busque y devuelva el primer elemento duplicado en una lista dada.
  
-def buscar_duplicado(lista):
-    no_duplicados = set()
-    for elemento in lista:
-        if elemento in no_duplicados:
-            return elemento  #Aqui devolverias el primer elemento al encontrar coincidencia en el set
-        else:
-            no_duplicados.add(elemento)
-    return None
+    # def buscar_duplicado(lista):
+    #     no_duplicados = set()
+    #     for elemento in lista:
+    #         if elemento in no_duplicados:
+    #             return elemento  #Aqui devolverias el primer elemento al encontrar coincidencia en el set
+    #         else:
+    #             no_duplicados.add(elemento)
+    #     return None
 
-numeros = [2, 5, 1, 2, 3, 5, 14]
-resultado = buscar_duplicado(numeros)
+    # numeros = [2, 5, 1, 2, 3, 5, 14]
+    # resultado = buscar_duplicado(numeros)
 
-print(resultado)
+    # print(resultado)
 
 # 28 Crea una función que convierta una variable en una cadena de texto y enmascare todos los caracteres con el carácter '#' excepto los últimos cuatro.
 
