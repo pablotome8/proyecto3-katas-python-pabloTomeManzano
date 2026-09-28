@@ -94,7 +94,7 @@
     # def conversor_tupla_string(tupla):
     #     return list(map(lambda t: " ".join(t),tupla))
 
-    # tuplas = [('Hola', 'Mundo'), ('Python', 'es', 'genial'), ('Katas', '2026')]
+    # tuplas = [('Hola', 'Gallu'), ('Python', 'me', 'esta', 'costando'), ('Katas', '2026')]
     # resultado = conversor_tupla_string(tuplas)
 
     # print(resultado)
@@ -104,7 +104,7 @@
     # def filtrar_mascotas(lista_mascotas):
     #     prohibidas = ["Mapache", "Tigre", "Serpiente Pitón", "Cocodrilo", "Oso"]
     #     return list(filter(lambda mascotas: mascotas not in prohibidas, lista_mascotas))
-    # mis_mascotas = ["Perro", "Tigre", "Gato", "Mapache", "Hámster", "Oso"]
+    # mis_mascotas = ["Perro", "Muil", "Gato", "Mapache", "Hámster", "Oso Vicioso"]
     # resultado = filtrar_mascotas(mis_mascotas)
 
     # print(resultado)
@@ -291,7 +291,7 @@
     # def concatenar_palabras(lista_palabras):
     #     return reduce(lambda p,p2: p+" "+p2,lista_palabras)
 
-    # palabras = ["Hola", "mundo", "desde", "Python"]
+    # palabras = ["Hola", "manin", "real", "Oviedo"]
     # resultado = concatenar_palabras(palabras)
 
     # print(resultado)
@@ -380,13 +380,13 @@
         
     #     nombres = [nombre.strip() for nombre in entrada.split(",") if nombre.strip()]
         
-    #     buscado = input("Ingresa el nombre que deseas buscar: ").strip()
+    #     buscado = input("Ingresa el nombre que quieres buscar: ").strip()
         
     #     if buscado in nombres:
-    #         print(f"¡El nombre '{buscado}' fue encontrado en la lista!")
+    #         print(f"¡El nombre '{buscado}' esta en la lista!")
     #     else:
     #         # Lanzamos una excepción personalizada si no existe
-    #         raise ValueError(f"El nombre '{buscado}' no se encuentra en la lista.")
+    #         raise ValueError(f"El nombre '{buscado}' no esta en la lista.")
 
     # try:
     #     buscar_nombre()
